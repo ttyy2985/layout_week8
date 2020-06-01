@@ -1,1 +1,19 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Document</title></head><body></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Document</title><link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"/><link rel="stylesheet" href="css/style.css"/></head><body><!-- Swiper--><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide border">Slide 1</div><div class="swiper-slide border">Slide 2</div><div class="swiper-slide border">Slide 3</div><div class="swiper-slide border">Slide 4</div><div class="swiper-slide border">Slide 5</div><div class="swiper-slide border">Slide 6</div><div class="swiper-slide border">Slide 7</div><div class="swiper-slide border">Slide 8</div><div class="swiper-slide border">Slide 9</div><div class="swiper-slide border">Slide 10</div></div></div><script src="https://unpkg.com/swiper/js/swiper.min.js"></script><script>var swiper = new Swiper('.swiper-container', {
+  //- loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 2,
+  spaceBetween: 20,
+  breakpoints: {
+  768: {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+  },
+  992: {
+    slidesPerView: 4,
+    spaceBetween: 50,
+    centeredSlides: true,
+  },
+}
+});</script></body></html>
