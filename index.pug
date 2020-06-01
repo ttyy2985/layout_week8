@@ -5,21 +5,67 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css")
     link(rel="stylesheet", href="css/style.css")
   body
     // Swiper
     .swiper-container
       .swiper-wrapper
-        .swiper-slide.border Slide 1
-        .swiper-slide.border Slide 2
-        .swiper-slide.border Slide 3
-        .swiper-slide.border Slide 4
-        .swiper-slide.border Slide 5
-        .swiper-slide.border Slide 6
-        .swiper-slide.border Slide 7
-        .swiper-slide.border Slide 8
-        .swiper-slide.border Slide 9
-        .swiper-slide.border Slide 10
+        .swiper-slide
+          .card.border-0
+            img.card-img-top(src='image/top1.jpg', alt='Card image cap')
+            .card-body.px-0
+              h6.card-title.mb-1 Hotel Aqua
+              p.card-text.mb-1
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star.mr-1
+                span.text-muted 5.0
+                small.text-muted ・2k reviews
+              p.card-text TWD 2,480
+                small.ml-2
+                  del.text-muted TWD 3,980
+        .swiper-slide
+          .card.border-0
+            img.card-img-top(src='image/top2.jpg', alt='Card image cap')
+            .card-body.px-0
+              h6.card-title.mb-1 Mr. Kawasaki Inn
+              p.card-text.mb-1
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star.mr-1
+                span.text-muted 4.0
+                small.text-muted ・500 reviews
+              p.card-text TWD 3,380
+        .swiper-slide
+          .card.border-0
+            img.card-img-top(src='image/top3.jpg', alt='Card image cap')
+            .card-body.px-0
+              h6.card-title.mb-1 Weekly Paradise
+              p.card-text.mb-1
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star.mr-1
+                span.text-muted 4.0
+                small.text-muted ・470 reviews
+              p.card-text TWD 4,780
+        .swiper-slide
+          .card.border-0
+            img.card-img-top(src='image/top4.jpg', alt='Card image cap')
+            .card-body
+              h6.card-title.mb-1 Beast Hotel
+              p.card-text.mb-1
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star.mr-1
+                span.text-muted 4.0
+                small.text-muted ・283 reviews
+              p.card-text TWD 1,980
 
     script(src="https://unpkg.com/swiper/js/swiper.min.js")
     script.
@@ -28,17 +74,14 @@ html(lang="en")
         centeredSlides: true,
         grabCursor: true,
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 30,
         breakpoints: {
         768: {
           slidesPerView: 3,
-          spaceBetween: 30,
-          centeredSlides: true,
         },
         992: {
           slidesPerView: 4,
-          spaceBetween: 50,
-          centeredSlides: true,
+          centeredSlides: false,
         },
       }
       });

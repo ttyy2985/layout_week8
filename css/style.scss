@@ -1,1 +1,37 @@
 @import '../node_modules/bootstrap-scss/bootstrap.scss';
+
+//先針對media queries的width設為變數
+$pc-media: 992px;
+$pad-media: 768px;
+$phone-media: 576px;
+
+//手機
+@mixin phone-width() {
+  @media (min-width: $phone-media) {
+    @content;
+  }
+}
+//平板
+@mixin pad-width() {
+  @media (min-width: $pad-media) {
+    @content;
+  }
+}
+//電腦
+@mixin pc-width() {
+  @media (min-width: $pc-media) {
+    @content;
+  }
+}
+* {
+  line-height: 1.5;
+}
+.card-img-top {
+  height: 164px;
+  @include pad-width() {
+    height: 185px;
+  }
+  @include pc-width() {
+    height: 175px;
+  }
+}
