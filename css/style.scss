@@ -1,5 +1,13 @@
 @import '../node_modules/bootstrap-scss/bootstrap.scss';
 
+* {
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
 //先針對media queries的width設為變數
 $pc-media: 992px;
 $pad-media: 768px;
@@ -23,9 +31,7 @@ $phone-media: 576px;
     @content;
   }
 }
-* {
-  line-height: 1.5;
-}
+
 .card-img-top {
   height: 164px;
   @include pad-width() {
@@ -33,5 +39,28 @@ $phone-media: 576px;
   }
   @include pc-width() {
     height: 175px;
+  }
+  &.rounded {
+    border-radius: 8px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  @include pad-width() {
+    font-size: 32px;
+  }
+}
+
+.tags {
+  .tag {
+    font-size: 20px;
+    @include pad-width() {
+      font-size: 24px;
+    }
+    &.active {
+      border-bottom: 2px solid $primary !important;
+      color: $primary;
+    }
   }
 }
