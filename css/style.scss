@@ -8,6 +8,12 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 //先針對media queries的width設為變數
 $pc-media: 992px;
 $pad-media: 768px;
@@ -40,9 +46,6 @@ $phone-media: 576px;
   @include pc-width() {
     height: 175px;
   }
-  &.rounded {
-    border-radius: 8px;
-  }
 }
 
 .title {
@@ -69,9 +72,23 @@ $phone-media: 576px;
   }
 }
 
-.card {
+.destination .card {
   .card-img {
     height: 78px;
-    background-image: linear-gradient(270deg, #000, #fff);
+  }
+  &:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg, transparent, $black);
+    opacity: 1;
+    transition: all 0.5s;
+    border-radius: $border-radius;
+  }
+  .card-img-overlay {
+    z-index: 10;
   }
 }
