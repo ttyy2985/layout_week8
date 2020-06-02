@@ -18,7 +18,6 @@ html(lang="en")
           sup 67
         li.tag.border-bottom.px-4 Taipei
           sup 53
-
       .swiper-container
         .swiper-wrapper
           .swiper-slide
@@ -127,6 +126,43 @@ html(lang="en")
                 p.text-muted.mb-0.text-uppercase Thailand
                 h5.card-title.mb-0 Bangkok 
               i.fas.fa-angle-down.text-white
+    section.container
+        // Swiper
+        .d-flex.justify-content-between.align-items-baseline
+          h3.title.mb-4.mr-auto Get Inspiration
+          button.btn.btn-outline-primary.text-uppercase see more
+        .swiper-container2.swiper-container.mb-5.mb-lg-6
+          .swiper-wrapper
+            .swiper-slide
+              .card.border-0
+                img.card-img-top.rounded.mb-1(src='image/top1.jpg', alt='Card image cap')
+                .card-body.p-0.pt-4
+                  h4.card-title.mb-1 Hotel Aqua
+                  p.card-text.text-muted Italy is the fifth most visited country in the world, with a total of 52.3 million…
+            .swiper-slide
+              .card.border-0
+                img.card-img-top.mb-1.rounded(src='image/top2.jpg', alt='Card image cap')
+                .card-body.p-0.pt-4
+                  h4.card-title.mb-1 Mr. Kawasaki Inn
+                  p.card-text.text-muted Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…
+            .swiper-slide
+              .card.border-0
+                img.card-img-top.mb-1.rounded(src='image/top3.jpg', alt='Card image cap')
+                .card-body.p-0.pt-4
+                  h4.card-title.mb-1 Weekly Paradise
+                  p.card-text.text-muted The national cuisine has been described as Pacific Rim, incorporating the native Māori…
+    section.footer-banner.container-fluid.bg-secondary.py-4.py-md-7
+      .container
+        .row.d-flex.align-items-center.flex-column
+          h2.footer-banner-title.font-weight-bold.mb-3.mb-md-4 Subscribe for Exclusive Offer
+          .col-md-10.col-lg-6.col-12
+            .input-group.input-group-lg
+              input.form-control.rounded-0(type='text', placeholder="Your email address", aria-label="Your email address", aria-describedby='basic-addon2')
+              .input-group-append
+                button.btn.btn-primary.rounded-0.text-uppercase(type='button') subscribe
+
+
+
 
     script(src="https://unpkg.com/swiper/js/swiper.min.js")
     script.
@@ -142,6 +178,23 @@ html(lang="en")
         },
         992: {
           slidesPerView: 4,
+          centeredSlides: false,
+        },
+      }
+      });
+      var swiper = new Swiper('.swiper-container2', {
+        //- loop: true,
+        centeredSlides: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+        768: {
+          slidesPerView: 3,
+          centeredSlides: false,
+        },
+        992: {
+          slidesPerView: 3,
           centeredSlides: false,
         },
       }

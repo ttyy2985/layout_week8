@@ -92,3 +92,12 @@ $phone-media: 576px;
     z-index: 10;
   }
 }
+
+.footer-banner{
+  .footer-banner-title{
+    font-size: $h4-font-size;
+    @include pad-width(){
+      font-size: $h1-font-size;
+    }
+  }
+}
