@@ -11525,4 +11525,25 @@ img {
   left: 0;
   z-index: -2;
 }
+
+.input-icon {
+  background-color: white;
+  background-position: 10px 15px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  padding: 16px;
+  padding-left: 40px;
+}
+
+.input-destinaion {
+  background-image: url("../image/location.svg");
+}
+
+.input-calendar {
+  background-image: url("../image/calendar.png");
+}
+
+.input-user {
+  background-image: url("../image/user.png");
+}
 /*# sourceMappingURL=style.css.map */

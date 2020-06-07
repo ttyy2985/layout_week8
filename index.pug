@@ -51,13 +51,14 @@ html(lang="en")
       a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
         span.carousel-control-next-icon(aria-hidden='true')
         span.sr-only Next
-    section.container(style="margin-top:-35px;")
+    section.container(style="margin-top:-45px;")
       .row.d-flex.justify-content-center
         .col-lg-10.col-md-8.col-12.bg-secondary.d-flex.justify-content-between.align-items-center.p-3
-          select.form-control
-          select.form-control
-          select.form-control
-          button.btn.btn-primary SEARCH
+          input.form-control.h-100.mr-3.input-icon.input-destinaion(placeholder="Destination")
+
+          input.form-control.h-100.mr-3.input-icon.input-calendar(placeholder="Check-in / Check-out")
+          input.form-control.h-100.mr-3.input-icon.input-user(placeholder="Guests")
+          button.btn.btn-primary.px-5.py-3 SEARCH
     section.container
       // Swiper
       h3.title.mb-4 Top Choices
