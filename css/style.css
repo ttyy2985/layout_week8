@@ -11512,4 +11512,17 @@ img {
     font-size: 3rem;
   }
 }
+
+.login-img::after {
+  content: '';
+  background-image: url(../image/login.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
 /*# sourceMappingURL=style.css.map */

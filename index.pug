@@ -7,7 +7,57 @@ html(lang="en")
     link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css")
     link(rel="stylesheet", href="css/style.css")
+    
   body
+    //- navbar start
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top
+      .container
+        a.navbar-brand(href='index.html') 
+          img(src="image/ic-logo-aloha.svg", alt="")
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.dropdown.mr-5
+              a#navbarDropdown.nav-link.dropdown-toggle.text-dark(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                i.fas.fa-globe
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='#') Chinese
+                a.dropdown-item(href='#') English
+            li.nav-item.mr-5
+              a.nav-link.text-dark(href='#')
+                | Sign up 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link.text-dark(href='#') Login
+    //- navbar end
+    section#carouselExampleCaptions.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
+        li(data-target='#carouselExampleCaptions', data-slide-to='1')
+        li(data-target='#carouselExampleCaptions', data-slide-to='2')
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src='image/index-banner.jpg' style="object-fit:cover;height:320px;", alt='...')
+        .carousel-item
+          img.d-block.w-100(src='image/DinDaeng1.jpg' style="object-fit:cover;height:320px;", alt='...')
+        .carousel-item
+          img.d-block.w-100(src='image/Bangkok.jpg' style="object-fit:cover;height:320px;", alt='...')
+        .solgan.h-100.position-absolute.text-white(style="top: 41%;left: 30%;")
+          h1.font-weight-bold Discover your ideal hotel
+      a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next
+    section.container(style="margin-top:-35px;")
+      .row.d-flex.justify-content-center
+        .col-lg-10.col-md-8.col-12.bg-secondary.d-flex.justify-content-between.align-items-center.p-3
+          select.form-control
+          select.form-control
+          select.form-control
+          button.btn.btn-primary SEARCH
     section.container
       // Swiper
       h3.title.mb-4 Top Choices
@@ -160,11 +210,11 @@ html(lang="en")
               input.form-control.rounded-0(type='text', placeholder="Your email address", aria-label="Your email address", aria-describedby='basic-addon2')
               .input-group-append
                 button.btn.btn-primary.rounded-0.text-uppercase(type='button') subscribe
-    footer.footer.container
+    footer.footer.container.py-4
       .row
         .col-lg-4.col-md-6.col-12
           small.text-muted © 2020 ALOHA, Inc. All rights reserved.
-        .col-lg-5.col-md-6.col-12
+        .col-lg-4.col-md-6.col-12
           ul.d-flex.justify-content-md-end.justify-content-center.justify-content-lg-start
             li.mr-4
               a.text-muted(href="#") FAQs
@@ -172,10 +222,25 @@ html(lang="en")
               a.text-muted(href="#") Terms of use
             li.mr-4
               a.text-muted(href="#") Privacy policy
+        .col-lg-4.d-none.d-lg-flex.justify-content-end
+          ul.d-lg-flex.justify-content-end
+            li.mr-4
+              i.fas.fa-globe
+              select.border-0.text-muted
+                option(value="chinese") Chinese
+                option(value="english") English
+            li
+              i.fas.fa-dollar-sign
+              select.border-0.text-muted
+                option(value="twd") TWD
+                option(value="usd") USD
 
 
 
 
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js")
     script(src="https://unpkg.com/swiper/js/swiper.min.js")
     script.
       var swiper = new Swiper('.swiper-container', {
